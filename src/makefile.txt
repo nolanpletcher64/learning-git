@@ -1,0 +1,14 @@
+.PHONY: all
+all: helloworld
+
+helloworld: helloworld.cpp
+	g++ -o helloworld helloworld.cpp
+
+.PHONY: install
+install:
+	mkdir -p binaries
+	cp -p helloworld binaries
+
+.PHONY: clean
+clean:
+	rm -f helloworld
